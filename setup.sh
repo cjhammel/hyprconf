@@ -112,6 +112,7 @@ dirs=(
     menus
     nvim
     nwg-look
+    pypr
     qt5ct
     qt6ct
     rofi
