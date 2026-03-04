@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Advanced Hyprland Installation Script by
-# Shell Ninja ( https://github.com/shell-ninja )
+# Forked from Shell Ninja ( https://github.com/shell-ninja )
 
 # color defination
 red="\e[1;31m"
@@ -367,7 +367,7 @@ printf " \n"
 # =========  wallpaper section  ========= #
 
 if [[ "$wallpaper" =~ ^[Y|y]$ ]]; then
-    url="https://github.com/shell-ninja/Wallpapers/archive/refs/heads/main.zip"
+    url="https://github.com/cjhammel/Wallpapers/archive/refs/heads/main.zip"
 
     target_dir="$HOME/.cache/wallpaper-cache"
     zip_path="$target_dir.zip"
