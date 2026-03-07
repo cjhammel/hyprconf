@@ -8,7 +8,7 @@ end="\x1b[0m"
 
 clear
 
-repo="https://github.com/shell-ninja/hyprconf/archive/refs/heads/main.zip"
+repo="https://github.com/cjhammel/hyprconf/archive/refs/heads/main.zip"
 target_dir="$HOME/.cache/hyrconf"
 zip_path="$target_dir.zip"
 
