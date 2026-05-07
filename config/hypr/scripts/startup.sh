@@ -12,8 +12,13 @@ BEZIER=".28,.58,.99,.37"
 AWWW_PARAMS="--transition-fps $FPS --transition-type $TYPE --transition-duration $DURATION --transition-bezier $BEZIER"
 
 if [[ -f "$wallpaper" ]]; then
-    awww-daemon &
-    awww img $wallpaper $AWWW_PARAMS
+    if command -v awww &> /dev/null; then
+        awww-daemon &
+        awww img $wallpaper $AWWW_PARAMS
+    elif command -v swww &> /dev/null; then
+        swww-daemon &
+        swww img $wallpaper $AWWW_PARAMS
+    fi
 else
     "$scripts_dir/Wallpaper.sh"
 fi
