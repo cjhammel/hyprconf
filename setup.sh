@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Advanced Hyprland Installation Script by
-# Shell Ninja ( https://github.com/shell-ninja )
+# Forked from Shell Ninja ( https://github.com/shell-ninja )
 
 # color defination
 red="\e[1;31m"
@@ -112,6 +112,7 @@ dirs=(
     menus
     nvim
     nwg-look
+    pypr
     qt5ct
     qt6ct
     rofi
@@ -366,7 +367,7 @@ printf " \n"
 # =========  wallpaper section  ========= #
 
 if [[ "$wallpaper" =~ ^[Y|y]$ ]]; then
-    url="https://github.com/shell-ninja/Wallpapers/archive/refs/heads/main.zip"
+    url="https://github.com/cjhammel/Wallpapers/archive/refs/heads/main.zip"
 
     target_dir="$HOME/.cache/wallpaper-cache"
     zip_path="$target_dir.zip"
@@ -428,9 +429,7 @@ msg act "Generating colors and other necessary things..."
 
 
 # setting default themes, icon and cursor
-gsettings set org.gnome.desktop.interface gtk-theme "FlatColor"
-gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
-
+gsettings set org.gnome.desktop.interface gtk-theme 'TokyoNight'
 gsettings set org.gnome.desktop.interface icon-theme 'TokyoNight'
 gsettings set org.gnome.desktop.interface cursor-theme 'Bibata-Modern-Ice'
 
